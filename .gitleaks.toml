@@ -1,0 +1,23 @@
+# Secret-scan settings for the Sync workflow (scripts/sync.py passes this file
+# to gitleaks). Keep every allowlist entry as narrow as possible and say why.
+
+[extend]
+useDefault = true
+
+# Mechanical Advantage's read-only bot token for AdvantageKit's GitHub Packages
+# maven repo, shipped (unicode-escaped) in their 2024 project template and copied
+# into 2024-robot/build.gradle. It is theirs, not ours, already public in their
+# template, and revoked.
+[[allowlists]]
+description = "AdvantageKit 2024 template bot token"
+targetRules = ["github-pat", "generic-api-key"]
+regexTarget = "secret"
+regexes = ['''^ghp_nVQjUOLayfnx''']
+
+# AdvantageKit's @AutoLogOutput(key = "Subsystem/Name") annotations look like
+# API keys to the generic rule.
+[[allowlists]]
+description = "AdvantageKit log keys"
+targetRules = ["generic-api-key"]
+regexTarget = "line"
+regexes = ['''@AutoLogOutput\(\s*key\s*=\s*"[A-Za-z0-9_/]+"''']

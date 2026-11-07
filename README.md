@@ -37,10 +37,12 @@ Questions or ideas? Open an issue.
    ```yaml
    projects:
      - repo: 2026-robot
+       ref: master
+       releases: false
        description: Robot code for the 2026 season (REBUILT)
    ```
 
-   The field list is at the top of that file. The project is published under this repo's BSD 3-Clause license; to use a different one, add a `LICENSE` file to the source repo and it comes along with the folder. Once the PR merges, the Sync workflow copies the project in a few minutes.
+   Always set `ref` and `releases`, even when the default would do: say which branch to publish (often not the repo's default) and whether its releases come along. The field list is at the top of that file. The project is published under this repo's BSD 3-Clause license; to use a different one, add a `LICENSE` file to the source repo and it comes along with the folder. Once the PR merges, the Sync workflow copies the project in a few minutes.
 
 To unpublish, delete the entry. The folder is removed on the next sync, but anything already published stays in this repo's history and may already have been copied elsewhere.
 
