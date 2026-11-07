@@ -2,7 +2,7 @@ name: Sync projects
 
 on:
   schedule:
-    - cron: "17 * * * *" # hourly
+    - cron: "17 8 * * *" # daily, about 3-4am Eastern
   workflow_dispatch:
     inputs:
       only:

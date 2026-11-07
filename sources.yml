@@ -1,7 +1,7 @@
 # Projects published in this repo.
 #
 # Each entry copies one private 2702rebels repo into a top-level folder here.
-# The Sync workflow runs every hour, and right after a change to this file
+# The Sync workflow runs once a day, and right after a change to this file
 # lands on main. Only a snapshot of the files is copied, never history.
 #
 # Fields:
