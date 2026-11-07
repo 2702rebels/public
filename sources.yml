@@ -1,0 +1,24 @@
+# Projects published in this repo.
+#
+# Each entry copies one private 2702rebels repo into a top-level folder here.
+# The Sync workflow runs every hour, and right after a change to this file
+# lands on main. Only a snapshot of the files is copied, never history.
+#
+# Fields:
+#   repo         (required) private repo name in the 2702rebels org
+#   path         folder name here; defaults to the repo name
+#   ref          branch, tag, or commit to copy; defaults to the repo's default branch
+#   subdir       copy only this folder of the source repo
+#   description  one line for the project table in README.md
+#   exclude      extra paths to leave out, as globs relative to the copied folder,
+#                e.g. ["notes/**", "*.local.json"]; a pattern that matches a
+#                folder drops the whole folder
+#   releases     true to copy the source repo's GitHub releases (and their files)
+#                here, tagged "<path>/<tag>"
+#
+# Files the source repo marks `export-ignore` in its .gitattributes are left out too.
+# Removing an entry deletes its folder here on the next sync.
+
+projects:
+  - repo: 2026-robot
+    description: Robot code for the 2026 season (REBUILT)
