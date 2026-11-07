@@ -11,7 +11,9 @@ Files too big for git, like robot CAD exports, are on the [Releases](../../relea
 ## Projects
 
 <!-- projects:start -->
-_Nothing published yet._
+| Project | What it is | Updated |
+| --- | --- | --- |
+| [2026-robot](2026-robot/) | Robot code for the 2026 season (REBUILT) | 2026-10-25 (`b4979c7`) |
 <!-- projects:end -->
 
 Questions or ideas? Open an issue.
