@@ -25,12 +25,12 @@
 projects:
   - repo: 2022-robot
     ref: main
-    releases: false
+    releases: true
     description: Robot code for the 2022 season (RAPID REACT)
 
   - repo: 2023-robot
     ref: master
-    releases: false
+    releases: true
     description: Robot code for the 2023 season (CHARGED UP)
 
   - repo: 2024-robot
@@ -45,7 +45,7 @@ projects:
 
   - repo: 2026-robot
     ref: master
-    releases: false
+    releases: true
     description: Robot code for the 2026 season (REBUILT)
 
   - repo: BPI-Vision
