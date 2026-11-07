@@ -2,7 +2,7 @@
 
 Code, CAD, and other work from [FRC Team 2702 (Rebels)](https://2702rebels.com) that we share with the FIRST community.
 
-Each folder is a copy of one of the team's own repositories, updated automatically within an hour of a change. Only the current files are copied, not the history.
+Each folder is a copy of one of the team's own repositories, updated automatically once a day. Only the current files are copied, not the history.
 
 Everything here is under the [BSD 3-Clause license](LICENSE) unless a folder has its own license file, which covers that folder. Third-party files keep their original licenses.
 
@@ -55,7 +55,7 @@ Git LFS files aren't copied, so a project that uses LFS needs those files exclud
 
 ### How it works
 
-[`.github/workflows/sync.yml`](.github/workflows/sync.yml) runs [`scripts/sync.py`](scripts/sync.py) every hour, whenever `sources.yml` changes on main, and on demand from the Actions tab (Run workflow, optionally for one folder). For each project it fetches the source's branch tip, copies the files, scans them, and commits the folder if anything changed. [`.github/sync-state.json`](.github/sync-state.json) records which source commit each folder came from.
+[`.github/workflows/sync.yml`](.github/workflows/sync.yml) runs [`scripts/sync.py`](scripts/sync.py) once a day, whenever `sources.yml` changes on main, and on demand from the Actions tab (Run workflow, optionally for one folder). For each project it fetches the source's branch tip, copies the files, scans them, and commits the folder if anything changed. [`.github/sync-state.json`](.github/sync-state.json) records which source commit each folder came from.
 
 It reads the private repos through the **2702rebels-public-sync** GitHub App, which has read-only access to repository contents. Each run asks for a token limited to the repos in `sources.yml`. It pushes with a deploy key that's allowed past the review rule on main. Everyone else changes main through a reviewed PR, which is what keeps `sources.yml` from publishing a repo without a second person agreeing.
 
