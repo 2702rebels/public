@@ -50,7 +50,7 @@ Every sync scans for secrets with [gitleaks](https://github.com/gitleaks/gitleak
 
 ### Publishing CAD and other large files
 
-- **From a project's own releases:** set `releases: true` on its entry. Each release in the source repo, with its attached files, is copied here, tagged `<folder>/<tag>` (for example `2026-robot/v1.0`). A release is copied once, on the first sync after it's published, and later changes to it aren't, so attach all its files before publishing (drafts are skipped).
+- **From a project's own releases:** set `releases: true` on its entry. Each release in the source repo, with its attached files, is copied here, tagged `<folder>/<tag>` (for example `2026-robot/v1.0`). New releases are picked up by the next sync after they're published, whenever that is. Once a release has been copied it isn't updated, so attach all its files before you publish it (drafts are skipped), and put any file you missed in a new release.
 - **By hand:** create a release on this repo and attach the files (up to 2 GB each). Name the tag `<project>/<what>`, like `2026-robot/cad-champs`, so it sorts with its project.
 
 Git LFS files aren't copied, so a project that uses LFS needs those files excluded and published as release files.
