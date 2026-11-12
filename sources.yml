@@ -47,18 +47,3 @@ projects:
     ref: master
     releases: true
     description: Robot code for the 2026 season (REBUILT)
-
-  - repo: BPI-Vision
-    ref: 2024-Vision
-    releases: false
-    description: BananaPi coprocessor vision for target and AprilTag tracking
-
-  - repo: CANduitLib
-    ref: main
-    releases: false
-    description: WPILib vendor library for the CANduit device
-
-  - repo: PitLeds
-    ref: main
-    releases: false
-    description: Arduino Nano code for the LED strips in the pit
