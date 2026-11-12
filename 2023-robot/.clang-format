@@ -1,0 +1,25 @@
+---
+BasedOnStyle: Google
+UseTab: Never
+---
+Language: Cpp
+IndentWidth: 2
+ContinuationIndentWidth: 2
+ConstructorInitializerIndentWidth: 2
+ColumnLimit: 100
+AlignAfterOpenBracket: AlwaysBreak
+AlignOperands: AlignAfterOperator
+BreakConstructorInitializers: AfterColon
+PackConstructorInitializers: CurrentLine
+BinPackArguments: false
+BinPackParameters: false
+AllowAllArgumentsOnNextLine: true
+BreakBeforeTernaryOperators: true
+SpaceBeforeCpp11BracedList: true
+Cpp11BracedListStyle: false
+EmptyLineAfterAccessModifier: Never
+EmptyLineBeforeAccessModifier: LogicalBlock
+SeparateDefinitionBlocks: Always
+MaxEmptyLinesToKeep: 1
+AllowShortFunctionsOnASingleLine: Empty
+SpaceAfterCStyleCast: true

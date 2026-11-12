@@ -14,6 +14,7 @@ Files too big for git, like robot CAD exports, are on the [Releases](../../relea
 | Project | What it is | Updated |
 | --- | --- | --- |
 | [2022-robot](2022-robot/) | Robot code for the 2022 season (RAPID REACT) | 2023-11-16 (`834c84c`) |
+| [2023-robot](2023-robot/) | Robot code for the 2023 season (CHARGED UP) | 2023-04-20 (`64fc66a`) |
 | [2026-robot](2026-robot/) | Robot code for the 2026 season (REBUILT) | 2026-10-25 (`b4979c7`) |
 <!-- projects:end -->
 

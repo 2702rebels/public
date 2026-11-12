@@ -5,6 +5,12 @@
     "commit": "834c84cfb1a80aed46e993403f62642a314569cc",
     "date": "2023-11-16"
   },
+  "2023-robot": {
+    "repo": "2702rebels/2023-robot",
+    "ref": "master",
+    "commit": "64fc66a63231fec112c4063b5262ddb31b4d20f1",
+    "date": "2023-04-20"
+  },
   "2026-robot": {
     "repo": "2702rebels/2026-robot",
     "ref": "HEAD",
