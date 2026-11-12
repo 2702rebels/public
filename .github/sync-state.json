@@ -11,6 +11,12 @@
     "commit": "64fc66a63231fec112c4063b5262ddb31b4d20f1",
     "date": "2023-04-20"
   },
+  "2024-robot": {
+    "repo": "2702rebels/2024-robot",
+    "ref": "master",
+    "commit": "244d313d78a68469f53278962a355f6e34b80808",
+    "date": "2024-04-05"
+  },
   "2026-robot": {
     "repo": "2702rebels/2026-robot",
     "ref": "HEAD",
