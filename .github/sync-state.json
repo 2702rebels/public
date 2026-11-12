@@ -25,7 +25,7 @@
   },
   "2026-robot": {
     "repo": "2702rebels/2026-robot",
-    "ref": "HEAD",
+    "ref": "master",
     "commit": "b4979c712da31c1bd10bad2333f4882e6b83ac9a",
     "date": "2026-10-25"
   }
