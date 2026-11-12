@@ -1,4 +1,10 @@
 {
+  "2022-robot": {
+    "repo": "2702rebels/2022-robot",
+    "ref": "main",
+    "commit": "834c84cfb1a80aed46e993403f62642a314569cc",
+    "date": "2023-11-16"
+  },
   "2026-robot": {
     "repo": "2702rebels/2026-robot",
     "ref": "HEAD",
