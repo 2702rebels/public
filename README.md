@@ -37,10 +37,12 @@ Questions or ideas? Open an issue.
    ```yaml
    projects:
      - repo: 2026-robot
+       ref: master
+       releases: false
        description: Robot code for the 2026 season (REBUILT)
    ```
 
-   The field list is at the top of that file. The project is published under this repo's BSD 3-Clause license; to use a different one, add a `LICENSE` file to the source repo and it comes along with the folder. Once the PR merges, the Sync workflow copies the project in a few minutes.
+   Always set `ref` and `releases`, even when the default would do: say which branch to publish (often not the repo's default) and whether its releases come along. The field list is at the top of that file. The project is published under this repo's BSD 3-Clause license; to use a different one, add a `LICENSE` file to the source repo and it comes along with the folder. Once the PR merges, the Sync workflow copies the project in a few minutes.
 
 To unpublish, delete the entry. The folder is removed on the next sync, but anything already published stays in this repo's history and may already have been copied elsewhere.
 
@@ -48,7 +50,7 @@ Every sync scans for secrets with [gitleaks](https://github.com/gitleaks/gitleak
 
 ### Publishing CAD and other large files
 
-- **From a project's own releases:** set `releases: true` on its entry. Each release in the source repo, with its attached files, is copied here, tagged `<folder>/<tag>` (for example `2026-robot/v1.0`).
+- **From a project's own releases:** set `releases: true` on its entry. Each release in the source repo, with its attached files, is copied here, tagged `<folder>/<tag>` (for example `2026-robot/v1.0`). New releases are picked up by the next sync after they're published, whenever that is. Once a release has been copied it isn't updated, so attach all its files before you publish it (drafts are skipped), and put any file you missed in a new release.
 - **By hand:** create a release on this repo and attach the files (up to 2 GB each). Name the tag `<project>/<what>`, like `2026-robot/cad-champs`, so it sorts with its project.
 
 Git LFS files aren't copied, so a project that uses LFS needs those files excluded and published as release files.

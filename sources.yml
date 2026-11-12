@@ -6,19 +6,44 @@
 #
 # Fields:
 #   repo         (required) private repo name in the 2702rebels org
-#   path         folder name here; defaults to the repo name
 #   ref          branch, tag, or commit to copy; defaults to the repo's default branch
+#   releases     true to copy the source repo's GitHub releases (and their files)
+#                here, tagged "<path>/<tag>"
+#   path         folder name here; defaults to the repo name
 #   subdir       copy only this folder of the source repo
 #   description  one line for the project table in README.md
 #   exclude      extra paths to leave out, as globs relative to the copied folder,
 #                e.g. ["notes/**", "*.local.json"]; a pattern that matches a
 #                folder drops the whole folder
-#   releases     true to copy the source repo's GitHub releases (and their files)
-#                here, tagged "<path>/<tag>"
+#
+# Always set `ref` and `releases` on every entry, even when the default would do,
+# so what gets published never depends on the source repo's settings.
 #
 # Files the source repo marks `export-ignore` in its .gitattributes are left out too.
 # Removing an entry deletes its folder here on the next sync.
 
 projects:
+  - repo: 2022-robot
+    ref: main
+    releases: true
+    description: Robot code for the 2022 season (RAPID REACT)
+
+  - repo: 2023-robot
+    ref: master
+    releases: true
+    description: Robot code for the 2023 season (CHARGED UP)
+
+  - repo: 2024-robot
+    ref: master
+    releases: true
+    description: Robot code and CAD for the 2024 season (CRESCENDO)
+
+  - repo: 2025-robot
+    ref: main
+    releases: true
+    description: Robot code and CAD for the 2025 season (REEFSCAPE)
+
   - repo: 2026-robot
+    ref: master
+    releases: true
     description: Robot code for the 2026 season (REBUILT)
